@@ -1,13 +1,163 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #7b93ff 0%, #88c2ff 100%);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: all 0.4s ease;
+  }
+  
+  .input-container,
+  .pageheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  .input-container label,
+  .pageheader label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-right: 20px;
+    letter-spacing: 1px;
+  }
+  
+  .inputbox,
+  .dropdown {
+    padding: 14px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    width: 340px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #333;
+  }
+  
+  .inputbox {
+    background: rgba(255, 255, 255, 0.85);
+  }
+  
+  .dropdown {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.85);
+  }
+  
+  .inputbox:focus,
+  .dropdown:focus {
+    box-shadow: 0 0 10px rgba(88, 171, 255, 0.7);
+    border: 2px solid rgba(88, 171, 255, 0.6);
+  }
+  
+  .table {
+    margin-top: 25px;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+  
+  .table .col {
+    padding: 16px 12px;
+    font-size: 16px;
+    text-align: left;
+    color: #333;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .table .col.sortable {
+    cursor: pointer;
+    color: #006eff;
+    font-weight: 600;
+  }
+  
+  .table .col:hover {
+    background-color: rgba(0, 110, 255, 0.1);
+  }
+  
+  .table .paginator {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+  }
+  
+  .selection {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    gap: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .selection:hover {
+    background-color: rgba(240, 240, 255, 0.9);
+  }
+  
+  .selection .name,
+  .selection .email {
+    font-weight: 600;
+    color: #006eff;
+    margin-right: 15px;
+  }
+  
+  .selection span {
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .selection span:not(.name):not(.email) {
+    margin-right: 25px;
+  }
+  
+  @media (max-width: 768px) {
+    .selection {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .selection span:not(.name):not(.email) {
+      margin-right: 0;
+    }
+  
+    .container {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .input-container,
+    .pageheader {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .inputbox,
+    .dropdown {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    .table {
+      font-size: 14px;
+    }
+  }
+  
