@@ -6,6 +6,7 @@ import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';            
 import 'primeicons/primeicons.css';                          
 import ApiBase from './DataTable/ApiBase';
+import InfiniteScrollPhotos from './Component/InfiniteScrollPhotos';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,6 +14,7 @@ root.render(
   <React.StrictMode>
     {/* <App /> */}
     <ApiBase />
+    {/* <InfiniteScrollPhotos /> */}
   </React.StrictMode>
 );
 
